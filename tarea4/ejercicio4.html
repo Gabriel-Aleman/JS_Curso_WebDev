@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 4</title>
+    <link rel="icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png">
+    <link rel="stylesheet" href="./styleSheet.css">
+    <script src="ejercicio4.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="ejercicio1.html">Ejercicio 1</a>
+        <a href="ejercicio2.html">Ejercicio 2</a>
+        <a href="ejercicio3.html">Ejercicio 3</a>
+        <a href="ejercicio4.html">Ejercicio 4</a>
+
+    </nav>
+    <h1>Ejercicio #4:</h1>
+    <p
+        style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        Cree un script que mediante una función permita llenar un arreglo de 10 posiciones con números.
+        Cree otra función que lea un número que desee buscar en el arreglo. Si lo encuentra, reemplácelo
+        por su doble. En una última función, muestre el arreglo antes y después del reemplazo
+    </p>
+    <hr>
+
+    <button onclick="main()">Ingresar elementos del arreglo</button>
+    <br><br>
+
+    <div id="resultado" style="display: none;">
+        <h3>Contenido del arreglo original:</h3>
+        <h4 id="arreglo"></h4>
+
+        <h2 style="margin-top: 10px;">Sustituir número del arreglo</h2>
+
+        <input id="numOriginal" type="number"placeholder="Ingrese el número a sustituir">
+
+        <button onclick="realizarCambio()">Realizar cambio</button>
+
+        <div id="resultado_0" style="display: none;">
+            
+            <h3>Nuevo arreglo</h3>
+            <h4 id="nuevoArreglo"></h4>
+        </div>
+        
+
+    </div>
+</body>

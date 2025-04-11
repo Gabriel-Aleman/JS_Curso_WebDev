@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+    <link rel="icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png">
+    <link rel="stylesheet" href="./styleSheet.css">
+    <!-- Incluir la librería MathJax -->
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script src="ejercicio2.js"></script>
+
+
+</head>
+
+<body>
+    <nav>
+        <a href="ejercicio1.html">Ejercicio 1</a>
+        <a href="ejercicio2.html">Ejercicio 2</a>
+        <a href="ejercicio3.html">Ejercicio 3</a>
+    </nav>
+    <h1>Ejercicio #2:</h1>
+    <p
+        style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        Cree un script que lea un número, determine si el número es impar menor a 10, si es par menor a
+        10 o si es igual a 10. y el promedio de números mayores a 10. Muestre un mensaje en cada caso.
+    </p>
+    <hr>
+
+    <input type="number" id="miNumero" placeholder="Ingrese un numero entero" min="0">
+    <button onclick="numeroEnteroContra10()">Obtener resultado</button>
+    <br><br>
+
+
+
+    <div id="resultado" style="display: none;">
+        <h3 id="miResultado"></h3>
+
+
+    </div>
+    <script>
+         document.write(`<p>PROMEDIO=${res}=${promedio}</p>`);
+    </script>
+    <br><br>
+    <p id="promedio" style="display: none;"></p>
+</body>

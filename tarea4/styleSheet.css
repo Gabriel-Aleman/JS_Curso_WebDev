@@ -1,0 +1,184 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    display: flex;
+    justify-content: right;
+    
+    padding-right: 3%;
+
+}
+hr{
+    margin: 10px 0px;
+}
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    width: 80%;
+}
+
+
+#resultado {
+    border: 3px solid #ddd;              /* Borde suave con color gris claro */
+    padding: 20px;                       /* Espaciado interno más grande */
+    border-radius: 15px;                 /* Bordes redondeados más pronunciados */
+    background-color: #f9f9f9;           /* Fondo gris muy claro */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Sombra sutil alrededor */
+    margin-top: 20px;                    /* Margen superior para separar del contenido */
+    transition: all 0.3s ease;           /* Transición suave para efectos */
+}
+
+#resultado:hover {
+    transform: scale(1.02);              /* Efecto de expansión al pasar el ratón */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);  /* Sombra más pronunciada al pasar el ratón */
+}
+
+
+/* Encabezados */
+h1, h2, h3 {
+    margin-bottom: 15px;
+    color: #444;
+}
+h1{
+    padding-top: 10px;
+}
+h2{
+    background-color: #ccc;
+    border-radius: 10px;
+    box-shadow: inset;
+    padding: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+h3 {
+    font-family: 'Arial', sans-serif;  /* Cambiar la fuente */
+    font-size: 24px;                  /* Tamaño de la fuente */
+    font-weight: bold;                /* Negrita */
+    color: #333;                      /* Color de texto */
+    margin-bottom: 20px;              /* Espaciado inferior */
+    text-transform: uppercase;        /* Convertir a mayúsculas */
+    letter-spacing: 2px;              /* Espaciado entre letras */
+    background-color: #f0f0f0;        /* Color de fondo */
+    padding: 10px;                    /* Espaciado interno */
+    border-radius: 5px;               /* Bordes redondeados */
+}
+
+h4 {
+    font-family: 'Verdana', sans-serif;  /* Cambiar la fuente */
+    font-size: 20px;                     /* Tamaño de la fuente */
+    font-weight: normal;                 /* Peso de la fuente */
+    color: #555;                         /* Color de texto */
+    text-align: left;                    /* Alineación a la izquierda */
+    margin-top: 15px;                    /* Espaciado superior */
+    text-transform: capitalize;          /* Solo la primera letra en mayúscula */
+    letter-spacing: 1px;                 /* Espaciado entre letras */
+    padding-left: 10px;                  /* Espaciado interno a la izquierda */
+    border-left: 4px solid #ff6347;      /* Línea de borde a la izquierda */
+}
+
+
+/* Botones */
+.button {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #0056b3;
+}
+
+/* Tarjetas */
+.card {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Enlaces */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Formularios */
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #28a745;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #218838;
+}
+
+
+
+.myFlex{
+    display: flex;
+    flex-direction: row;
+}
+
+.myFlex input{
+   margin-left: 5px;
+   margin-right: 10px; 
+}
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}
+        /* Estilo básico para el navbar */
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            left: -5px;
+            height: 100%;
+            width: 15%;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }

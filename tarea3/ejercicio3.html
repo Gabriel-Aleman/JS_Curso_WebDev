@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+    <link rel="icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png">
+    <link rel="stylesheet" href="./styleSheet.css">
+    <script src="ejercicio3.js"></script>
+
+    <style>
+        #asc, #des{
+            background-color: rgb(210, 210, 203);
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            flex-grow: 1; /* Hace que los elementos crezcan igualmente */
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="ejercicio1.html">Ejercicio 1</a>
+        <a href="ejercicio2.html">Ejercicio 2</a>
+        <a href="ejercicio3.html">Ejercicio 3</a>
+        <a href="ejercicio4.html">Ejercicio 4</a>
+
+    </nav>
+    <h1>Ejercicio #3:</h1>
+    <p
+        style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        Cree un script que permita almacenar 10 números enteros en un arreglo. Muestre el contenido del
+        arreglo en forma ascendente y descendente.
+    </p>
+    <hr>
+
+    <button onclick="ingresarElmentos()">Ingresar elementos del arreglo</button>
+    <br><br>
+
+    <div id="resultado" style="display: none;">
+        <h3>Contenido del arreglo:</h3>
+        <h4 id="arreglo"></h4>
+
+        <div style="display: flex;flex-direction: row;">
+        <div id="asc"> <h4 style="margin-bottom: 10px;">elementos 0->9</h4></div>
+        <div id="des"> <h4 style="margin-bottom: 10px;">elementos 9->0</h4></div>
+    </div>
+    </div>
+</body>

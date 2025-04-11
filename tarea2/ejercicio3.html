@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+    <link rel="icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png">
+    <link rel="stylesheet" href="./styleSheet.css">
+    <script src="ejercicio3.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="ejercicio1.html">Ejercicio 1</a>
+        <a href="ejercicio2.html">Ejercicio 2</a>
+        <a href="ejercicio3.html">Ejercicio 3</a>
+    </nav>
+    <h1>Ejercicio #3:</h1>
+    <p
+        style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        Cree un script que lea el peso de un ave y determine: si pesa entre 0 y 2 kg. muestre el mensaje
+        “Peso bajo”, si pesa entre 2.01 kg. y 2.75 kg. muestre el mensaje “Peso medio”, si pesa más de
+        2.75 kg., muestre “Peso alto”.
+    </p>
+    <hr>
+
+    <input type="number" id="peso" placeholder="Ingrese el peso del ave" min="0">
+    <button onclick="pesoDelAve()">Obtener categoría de peso del ave</button>
+    <br><br>
+    <div id="resultado" style="display: none;">
+        <h3 id="mess">Hola mundo</h3>
+    </div>
+</body>

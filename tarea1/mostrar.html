@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Datos del Usuario</title>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 10px 0px 0px 20px;
+      padding: 1%;
+      border: dashed;
+      border-radius: 20px;
+      width: 30%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Datos Enviados</h1>
+  <div id="datos"></div>
+
+  <script>
+    let a=prompt("Hola");
+    // Recuperar los datos del sessionStorage
+    const nombre    = sessionStorage.getItem("nombre")      || "No proporcionado";
+    const apellido  = sessionStorage.getItem("apellido")    || "No proporcionado";
+    const correo    = sessionStorage.getItem("correo")      || "No proporcionado";
+    const telefono  = sessionStorage.getItem("telefono")    || "No proporcionado";
+    const direccion = sessionStorage.getItem("ubicacion")   || "No proporcionado";
+
+    
+    // Mostrar los datos en la página
+    document.getElementById("datos").innerHTML = `
+      <p><strong>Nombre:</strong> ${nombre}</p>
+      <p><strong>Apellido:</strong> ${apellido}</p>
+      <p><strong>Correo:</strong> ${correo}</p>
+      <p><strong>Telefono:</strong> ${telefono}</p>
+      <p><strong>Dirreccion:</strong> ${direccion}</p>
+
+    `;
+  </script>
+</body>
+</html>

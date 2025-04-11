@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simple</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; 
+            margin-top: 40px;
+        }
+        input, select, button { margin: 10px; padding: 10px; font-size: 16px; }
+         h2{
+            background-color: aliceblue;
+            border-radius: 15px;
+            margin: 0% 30%;
+            padding: 20px;
+         }
+        article {
+       
+            padding: 20px;
+            margin: 0 25%;
+            background-color: #dedede;
+            border-radius: 20px;
+
+        }
+        img{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: scale(0.6);
+        }
+    </style>
+</head>
+
+<body>
+
+    <article>
+    <h2>Calculadora Simple</h2>
+    <input type="number" id="num1" placeholder="Num 1">
+    <input type="number" id="num2" placeholder="Num 2">
+    
+    <select id="operation">
+        <option value="+"> Suma</option>
+        <option value="-"> Resta</option>
+        <option value="*"> Multiplicación</option>
+        <option value="/"> División</option>
+    </select>
+    <img src="https://www.svgrepo.com/show/10222/maths.svg" alt="">
+    <button onclick="calculadora()">Realizar calculo</button>
+    <h3 id="result"></h3>
+    </article>
+    
+    <script>
+        function calculadora() {
+            
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+
+            let operation = document.getElementById('operation').value;
+            let result;
+            
+            if (isNaN(num1) || isNaN(num2)) { /*Revisar si los valores ingresados son números*/
+                document.getElementById('result').innerText = "Por favor, ingrese números válidos.";
+                return;
+            }
+
+            switch (operation) { /*Determinar la operación ingresadfa*/
+                case '+': 
+                    result = num1 + num2; 
+                    break;
+                case '-': 
+                    result = num1 - num2; 
+                    break;
+                case '*': 
+                    result = num1 * num2; 
+                    break;
+                case '/': 
+                    /*
+                    Operador ternario:
+                    Si el denominador es cero, devuelve error. Caso contrario devuelve la división.
+                    */
+                    result = (num2 !== 0 ? num1 / num2 : "Error: División por cero"); 
+                    break;
+                default: 
+                    result = "Operación no válida";
+            }
+            
+            document.getElementById('result').innerText = "Resultado: " + result;
+            //alert(`${num1}${operation}${num2} = ${result}`)
+        }
+    </script>
+</body>
+</html>

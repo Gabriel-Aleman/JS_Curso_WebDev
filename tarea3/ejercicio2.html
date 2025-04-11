@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+    <link rel="icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png">
+    <link rel="stylesheet" href="./styleSheet.css">
+    <!-- Incluir la librería MathJax -->
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script src="ejercicio2.js"></script>
+
+
+</head>
+
+<body>
+    <nav>
+        <a href="ejercicio1.html">Ejercicio 1</a>
+        <a href="ejercicio2.html">Ejercicio 2</a>
+        <a href="ejercicio3.html">Ejercicio 3</a>
+        <a href="ejercicio4.html">Ejercicio 4</a>
+
+    </nav>
+    <h1>Ejercicio #2:</h1>
+    <p
+        style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        Cree un script que permita leer N letras, determine cantidad de vocales y consonantes que fueron
+        leídas. Muestre los resultados. Utilice el ciclo WHILE. 
+    </p>
+    <hr>
+
+    
+    <input type="number" id="numLetras" placeholder="Ingrese el número de letras a ingresar" min="0">
+    <button style="width: 100%;" onclick="vocYCons()">Obtener tipo de triángulo</button>
+    <br><br>
+
+
+
+    <div id="resultado" style="display: none;">
+        <h3>Total de consonantes:</h3>
+        <h4 id="consonantes">Hola mundo</h3>
+        <br>
+        <h3>Total de vocales:</h3>
+        <h4 id="vocales">Hola mundo</h3>
+    </div>
+
+</body>

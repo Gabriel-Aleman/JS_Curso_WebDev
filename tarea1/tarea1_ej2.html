@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario con JS</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    /* Estilos del formulario */
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+    
+    label {
+      display: inline-block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #555;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    
+    input[type="submit"] {
+      width: 100%;
+      background: #28a745;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    
+    input[type="submit"]:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+  <h1>Formulario de Usuario</h1>
+
+  <!--FORMULARIO: -->
+  <form id="formulario" onsubmit="procesarFormulario(event)">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido" required>
+    
+    <label for="correo">Correo Electrónico:</label>
+    <input type="email" id="correo" name="correo" required>
+    
+    <label for="ubicacion">Ubicación:</label>
+    <input type="text" id="ubicacion" name="ubicacion" required>
+    
+    <label for="telefono">Número de Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" required>
+
+    <input type="submit" value="Enviar">
+  </form>
+
+  <script>
+    // Función que procesa el envío del formulario
+    function procesarFormulario(event) {
+      event.preventDefault(); // Evita el envío por defecto
+      
+      // Obtener los valores del formulario
+      const nombre = document.getElementById("nombre").value;
+      const apellido = document.getElementById("apellido").value;
+      const correo = document.getElementById("correo").value;
+      const ubicacion = document.getElementById("ubicacion").value;
+      const telefono = document.getElementById("telefono").value;
+      
+      // Guardar los datos en sessionStorage
+      sessionStorage.setItem("nombre", nombre);
+      sessionStorage.setItem("apellido", apellido);
+      sessionStorage.setItem("correo", correo);
+      sessionStorage.setItem("ubicacion", ubicacion);
+      sessionStorage.setItem("telefono", telefono);
+      
+      // Redireccionar a la página donde se mostrarán los datos
+      window.location.href = "mostrar.html";
+    };
+  </script>
+</body>
+</html>
